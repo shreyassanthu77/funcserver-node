@@ -54,7 +54,7 @@ Any JSON serializable data can be returned from the function
 
   {
     "fun": "hello",
-    args: ["Mario"]
+    "args": ["Mario"]
   }
 ```
 Returns JSON version of your function response
