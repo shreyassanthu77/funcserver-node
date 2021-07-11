@@ -66,11 +66,13 @@ export class FuncServer {
     return this;
   }
 
-  public start() {
+  public start(PORT: number, ...middleware: Koa.Middleware[]) {
     const server = new Koa();
-    const PORT = 3333;
 
     server.use(koaBody());
+    middleware.forEach((m) => {
+      server.use(m);
+    });
     server.use(this.handler.bind(this));
     server.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);
