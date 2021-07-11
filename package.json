@@ -1,6 +1,6 @@
 {
   "name": "funcserver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "description": "A simple yet fast and powerful JSON based Backend Framework to build Next Generation API's for Node JS",
