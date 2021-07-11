@@ -1,0 +1,28 @@
+{
+  "name": "funserver",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "description": "A simple yet fast and powerful JSON based Backend Framework to build Next Generation API's for Node JS",
+  "repository": "https://github.com/shreyassanthu77/funserver-node",
+  "author": "Shreyas Mididoddi",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc -b",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "koa": "^2.13.1",
+    "@types/koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "nodemon": "^2.0.12"
+  }
+}
