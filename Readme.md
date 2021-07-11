@@ -46,7 +46,7 @@ Any JSON serializable data can be returned from the function
   
 ## Client API Reference
 
-#### Get all items
+#### Call your Function
 
 ```http
   POST /
@@ -57,5 +57,6 @@ Any JSON serializable data can be returned from the function
     "args": ["Mario"]
   }
 ```
+> *Note*: Args is an array of all the arguments to be passed to a function
 Returns JSON version of your function response
   
