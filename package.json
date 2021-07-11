@@ -1,6 +1,6 @@
 {
   "name": "funcserver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "description": "A simple yet fast and powerful JSON based Backend Framework to build Next Generation API's for Node JS",
@@ -22,7 +22,6 @@
   "dependencies": {
     "koa": "^2.13.1",
     "@types/koa": "^2.13.4",
-    "koa-body": "^4.2.0",
-    "nodemon": "^2.0.12"
+    "koa-body": "^4.2.0"
   }
 }
