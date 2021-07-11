@@ -1,6 +1,6 @@
-const { FunCall } = require("../");
+const { FuncServer } = require("../");
 
-const server = new FunCall();
+const server = new FuncServer();
 
 const hi = () => (name) => {
   console.log(this);

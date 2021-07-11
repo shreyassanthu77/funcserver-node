@@ -14,7 +14,7 @@ type Funs = {
   name: string;
 }[];
 
-export class FunServer {
+export class FuncServer {
   private functions: Funs = [];
 
   private notFoundError(ctx: Context) {
