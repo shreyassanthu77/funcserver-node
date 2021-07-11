@@ -51,7 +51,7 @@ Any JSON serializable data can be returned from the function
 #### Call your Function
 
 ```http
-  POST /
+  POST /func
   Content-Type: application/json
 
   {

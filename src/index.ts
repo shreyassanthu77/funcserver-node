@@ -25,6 +25,7 @@ export class FuncServer {
   }
 
   private async handler(ctx: Context) {
+    if (ctx.URL.pathname !== "/func") return;
     try {
       const { fun, args = [] } = ctx.request.body as Body;
 
@@ -74,8 +75,8 @@ export class FuncServer {
       server.use(m);
     });
     server.use(this.handler.bind(this));
-    server.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+    server.listen(PORT || 2345, () => {
+      console.log(`Server running on http://localhost:${PORT || 2345}`);
     });
   }
 }
