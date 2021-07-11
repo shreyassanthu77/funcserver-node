@@ -40,7 +40,7 @@ Any JSON serializable data can be returned from the function
 
 ### Start the server
 ```javascript
-  const PORT = process.env.PORT || 1234
+    const PORT = process.env.PORT || 1234
     server.start(PORT)
 ```
 > You can pass optional Koa compatible middleware after the port which run before each request
