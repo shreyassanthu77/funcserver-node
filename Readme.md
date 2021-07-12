@@ -60,7 +60,7 @@ Any JSON serializable data can be returned from the function
     server.start(PORT)
 ```
 > You can pass optional Koa compatible middleware after the port which run before each request
-
+> #### Cors is Enabled by Default
   
 ## Client API Reference
 
