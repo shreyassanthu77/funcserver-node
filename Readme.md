@@ -38,6 +38,22 @@ Any JSON serializable data can be returned from the function
     server.register([hello, "customName"])
 ```
 
+### Namespaced functions can also be created
+```javascript
+    // import createNamespace
+    const { createNamespace } = require("funcserver")
+    // create a Namespace
+    const usersNs = createNamespace("users")
+    // register functions
+    function getAll() {
+      return "All Users"
+    }
+    usersNs.register(getAll)
+    // register Namespace
+    server.registerNamespace(usersNs)
+```
+> Namespaced Functions can be Accessed through `namespaceName.functionName` syntax
+
 ### Start the server
 ```javascript
     const PORT = process.env.PORT || 1234
