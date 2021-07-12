@@ -1,9 +1,10 @@
 import Koa = require("koa");
-import koaBody = require("koa-body");
 import { Context } from "koa";
-import { Namespace } from "./namespace";
+import koaBody = require("koa-body");
+import cors = require("@koa/cors");
 
 export { Context } from "koa";
+import { Namespace } from "./namespace";
 export { createNamespace } from "./namespace";
 
 type Body = {
@@ -81,6 +82,7 @@ export class FuncServer {
     middleware.forEach((m) => {
       server.use(m);
     });
+    server.use(cors());
     server.use(this.handler.bind(this));
     server.listen(PORT || 2345, () => {
       console.log(`Server running on http://localhost:${PORT || 2345}`);
