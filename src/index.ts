@@ -1,15 +1,17 @@
 import Koa = require("koa");
 import koaBody = require("koa-body");
 import { Context } from "koa";
+import { Namespace } from "./namespace";
 
 export { Context } from "koa";
+export { createNamespace } from "./namespace";
 
 type Body = {
   fun: string;
   args: any[];
 };
 export type Fun = (this: Context, ...args: any[]) => any;
-type Funs = {
+export type Funs = {
   fun: Fun;
   name: string;
 }[];
@@ -64,6 +66,11 @@ export class FuncServer {
       }
     });
 
+    return this;
+  }
+
+  public registerNamespace(ns: Namespace) {
+    this.functions.push(...ns.functions);
     return this;
   }
 
